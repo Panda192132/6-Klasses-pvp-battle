@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kampoversigt</title>
+<style>
+    body { background:#1a1c23; color:white; font-family:Arial; text-align:center; padding:20px;}
+    nav {display: flex; justify-content: flex-end; gap: 20px; margin-bottom: 20px;}
+    nav a {color:#c2a27c; text-decoration:none; padding:10px 14px; border:1px solid #3b2f2f; border-radius:20px;}
+    nav a:hover {background:#3b2f2f;}
+    button {margin:10px; padding:10px; border:none; border-radius:8px; cursor:pointer;}
+    button.active {background:#ffd700; color:black;} 
+    table {width:90%; margin:0 auto; border-collapse:collapse;}
+    th,td {padding:5px; text-align:left;}
+    th {border-bottom:2px solid #444;}
+    tr:nth-child(odd){background:#22242c;}
+    tr:nth-child(even){background:#1f2128;}
+    .player {display:flex; align-items:center; gap:10px; cursor:pointer; padding:20px; border-radius:6px;}
+    .player img {width:40px; height:40px; border-radius:6px;}
+
+</style>
+</head>
+<body> 
+<nav>
+    <a href="../Leaderbord/index.html">Hjem</a>
+    <a href="../Kampe/Kamp.html">Kampe</a>
+    <a href="Spillere.html">Spillere</a>
+</nav>
+
+<h1>Kampoversigt</h1>
+<div id="categories">
+  <button onclick="window.location.href='kamp.html'">Overall</button>
+  <button onclick="window.location.href='vanilla.html'">Vanilla</button>
+  <button onclick="window.location.href='uhc.html'">UHC</button>
+  <button onclick="window.location.href='smp.html'">SMP</button>
+  <button onclick="window.location.href='sword.html'">Sword</button>
+  <button onclick="window.location.href='axe.html'">Axe</button>
+  <button onclick="window.location.href='Mace.html'">Mace</button>
+</div>
+<table>
+    <tr>
+        <th>Kamp</th>
+        <th>Spillere</th>
+        <th>Vinder</th>
+    </tr>
+    <tr>
+        <td>Kamp 1</td>
+        <td class="player" onclick="setWinner(this)"> 
+            <img src="https://mc-heads.net/avatar/Panda_b1" alt="Panda_b1">Panda_b1
+        </td>
+        <td class="player" onclick="setWinner(this)"> 
+            <img src="https://mc-heads.net/avatar/Bob" alt="Bob">Bob
+        </td>
+        <td class="winner">– Panda_b1</td>
+    </tr>
+    <tr>
+        <td>Kamp 2</td>
+        <td class="player" onclick="setWinner(this)"> 
+            <img src="https://mc-heads.net/avatar/Charlie" alt="Charlie">Charlie
+        </td>
+        <td class="player" onclick="setWinner(this)"> 
+            <img src="https://mc-heads.net/avatar/David" alt="David">David
+        </td>
+        <td class="winner">– David</td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
